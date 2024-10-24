@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: rgb(0, 0, 24);
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
+h1,
+span {
+  font-size: 72px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.container .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  place-items: center;
+  padding: 10px;
+}
+
+.container .image-container .image {
+  height: 316px;
+  width: 316px;
+  border: 10px solid rgba(245, 245, 245, 0.377);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.15s linear;
+}
+
+.container .image-container .image:hover {
+  transform: scale(1.08);
+}
+
+.container .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.15s linear;
+  filter: grayscale(100%);
+}
+
+.container .image-container .image:hover img {
+  transform: scale(1.01);
+  filter: grayscale(0%);
+}
